@@ -1,3 +1,5 @@
+import React from 'react';
+
 export default function Footer() {
     return <div className="flex w-full items-center justify-center">Contact</div>;
   }
