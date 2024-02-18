@@ -1,15 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import { BlueButton } from '@/core-ui/Button';
+import { headerTitle, registerButtonText } from '../../uitlTexts';
 
 export default function Header() {
   const navigate = useNavigate();  
     return (
       <div className="flex w-full justify-around items-center p-4">
-        <p>Hero Title</p>
+        <p>{headerTitle}</p>
         <div>
-          <button className="px-4 py-2 rounded-2xl bg-blue-600 text-white shadow-lg hover:shadow-sm ease-in-out duration-300" onClick={() => navigate("/register")}>
-            Register
-          </button>
+          <BlueButton action={() => navigate("/register")} title={registerButtonText} />
         </div>
       </div>
     );
